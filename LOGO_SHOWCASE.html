@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mahalakshmi Granites - Logo Showcase</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Georgia', serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 40px 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        h1 {
+            color: white;
+            text-align: center;
+            font-size: 48px;
+            margin-bottom: 20px;
+            text-shadow: 0 4px 8px rgba(0,0,0,0.3);
+        }
+        
+        .subtitle {
+            color: rgba(255,255,255,0.9);
+            text-align: center;
+            font-size: 18px;
+            margin-bottom: 60px;
+            letter-spacing: 2px;
+        }
+        
+        .logo-section {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+        }
+        
+        .logo-section.dark {
+            background: #2c3e50;
+        }
+        
+        .logo-title {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+        
+        .dark .logo-title {
+            color: white;
+        }
+        
+        .logo-description {
+            color: #7f8c8d;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+        
+        .dark .logo-description {
+            color: #bdc3c7;
+        }
+        
+        .logo-display {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px;
+            border: 2px dashed #ecf0f1;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .logo-display img {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        .size-variations {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .size-box {
+            border: 1px solid #ecf0f1;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .dark .size-box {
+            border-color: #34495e;
+        }
+        
+        .size-label {
+            font-size: 12px;
+            color: #95a5a6;
+            margin-top: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .specs {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 20px;
+        }
+        
+        .dark .specs {
+            background: #1a252f;
+        }
+        
+        .specs h3 {
+            font-size: 16px;
+            margin-bottom: 15px;
+            color: #2c3e50;
+        }
+        
+        .dark .specs h3 {
+            color: #ecf0f1;
+        }
+        
+        .specs ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .specs li {
+            padding: 8px 0;
+            color: #7f8c8d;
+            border-bottom: 1px solid #ecf0f1;
+        }
+        
+        .dark .specs li {
+            color: #bdc3c7;
+            border-bottom-color: #34495e;
+        }
+        
+        .specs li:last-child {
+            border-bottom: none;
+        }
+        
+        .color-palette {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .color-swatch {
+            text-align: center;
+        }
+        
+        .color-box {
+            width: 100%;
+            height: 80px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        
+        .color-name {
+            font-size: 12px;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 5px;
+        }
+        
+        .color-hex {
+            font-size: 11px;
+            color: #95a5a6;
+            font-family: 'Courier New', monospace;
+        }
+        
+        .footer-note {
+            text-align: center;
+            color: rgba(255,255,255,0.8);
+            margin-top: 40px;
+            padding: 20px;
+            font-size: 14px;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 32px;
+            }
+            
+            .logo-section {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🏛️ Mahalakshmi Granites</h1>
+        <p class="subtitle">PROFESSIONAL LOGO SHOWCASE</p>
+        
+        <!-- Circular Badge Logo -->
+        <div class="logo-section">
+            <h2 class="logo-title">1. Circular Badge Logo</h2>
+            <p class="logo-description">
+                Perfect for social media profiles, app icons, and square spaces. 
+                Features a dark gradient background with a prominent golden diamond symbol.
+            </p>
+            <div class="logo-display">
+                <img src="src/assets/images/logo.svg" alt="Circular Badge Logo" style="width: 200px;">
+            </div>
+            <div class="size-variations">
+                <div class="size-box">
+                    <img src="src/assets/images/logo.svg" alt="Small" style="width: 64px;">
+                    <div class="size-label">64px × 64px</div>
+                </div>
+                <div class="size-box">
+                    <img src="src/assets/images/logo.svg" alt="Medium" style="width: 128px;">
+                    <div class="size-label">128px × 128px</div>
+                </div>
+                <div class="size-box">
+                    <img src="src/assets/images/logo.svg" alt="Large" style="width: 200px;">
+                    <div class="size-label">200px × 200px</div>
+                </div>
+            </div>
+            <div class="specs">
+                <h3>Specifications</h3>
+                <ul>
+                    <li><strong>Dimensions:</strong> 200 × 200 pixels</li>
+                    <li><strong>Format:</strong> SVG (Vector)</li>
+                    <li><strong>Best For:</strong> Social media, avatars, app icons</li>
+                    <li><strong>Background:</strong> Dark gradient with gold accents</li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- Horizontal Logo -->
+        <div class="logo-section">
+            <h2 class="logo-title">2. Horizontal Logo (Light Background)</h2>
+            <p class="logo-description">
+                Ideal for website headers, email signatures, and letterheads. 
+                Features elegant typography with a diamond icon on the left.
+            </p>
+            <div class="logo-display">
+                <img src="src/assets/images/logo-horizontal.svg" alt="Horizontal Logo" style="width: 400px;">
+            </div>
+            <div class="size-variations">
+                <div class="size-box">
+                    <img src="src/assets/images/logo-horizontal.svg" alt="Small" style="width: 200px;">
+                    <div class="size-label">200px width</div>
+                </div>
+                <div class="size-box">
+                    <img src="src/assets/images/logo-horizontal.svg" alt="Medium" style="width: 300px;">
+                    <div class="size-label">300px width</div>
+                </div>
+                <div class="size-box">
+                    <img src="src/assets/images/logo-horizontal.svg" alt="Large" style="width: 400px;">
+                    <div class="size-label">400px width</div>
+                </div>
+            </div>
+            <div class="specs">
+                <h3>Specifications</h3>
+                <ul>
+                    <li><strong>Dimensions:</strong> 400 × 100 pixels</li>
+                    <li><strong>Format:</strong> SVG (Vector)</li>
+                    <li><strong>Best For:</strong> Website header, business cards, documents</li>
+                    <li><strong>Background:</strong> Transparent (for light backgrounds)</li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- White Logo for Dark Backgrounds -->
+        <div class="logo-section dark">
+            <h2 class="logo-title">3. White Logo (Dark Background)</h2>
+            <p class="logo-description">
+                Designed specifically for dark backgrounds like footers and promotional materials. 
+                White text with golden diamond creates stunning contrast.
+            </p>
+            <div class="logo-display" style="border-color: #34495e;">
+                <img src="src/assets/images/logo-white.svg" alt="White Logo" style="width: 400px;">
+            </div>
+            <div class="size-variations">
+                <div class="size-box">
+                    <img src="src/assets/images/logo-white.svg" alt="Small" style="width: 200px;">
+                    <div class="size-label">200px width</div>
+                </div>
+                <div class="size-box">
+                    <img src="src/assets/images/logo-white.svg" alt="Medium" style="width: 300px;">
+                    <div class="size-label">300px width</div>
+                </div>
+                <div class="size-box">
+                    <img src="src/assets/images/logo-white.svg" alt="Large" style="width: 400px;">
+                    <div class="size-label">400px width</div>
+                </div>
+            </div>
+            <div class="specs">
+                <h3>Specifications</h3>
+                <ul>
+                    <li><strong>Dimensions:</strong> 400 × 100 pixels</li>
+                    <li><strong>Format:</strong> SVG (Vector)</li>
+                    <li><strong>Best For:</strong> Website footer, dark themes, presentations</li>
+                    <li><strong>Background:</strong> Transparent (optimized for dark backgrounds)</li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- Favicon -->
+        <div class="logo-section">
+            <h2 class="logo-title">4. Favicon (Browser Tab Icon)</h2>
+            <p class="logo-description">
+                Compact version optimized for browser tabs. Simplified diamond design 
+                that remains recognizable even at tiny sizes.
+            </p>
+            <div class="logo-display">
+                <div style="display: flex; gap: 30px; align-items: center;">
+                    <img src="src/assets/images/favicon.svg" alt="Favicon" style="width: 32px;">
+                    <img src="src/assets/images/favicon.svg" alt="Favicon" style="width: 64px;">
+                    <img src="src/assets/images/favicon.svg" alt="Favicon" style="width: 128px;">
+                </div>
+            </div>
+            <div class="specs">
+                <h3>Specifications</h3>
+                <ul>
+                    <li><strong>Dimensions:</strong> 32 × 32 pixels</li>
+                    <li><strong>Format:</strong> SVG (Vector)</li>
+                    <li><strong>Best For:</strong> Browser tabs, bookmarks, mobile home screen</li>
+                    <li><strong>Background:</strong> Dark gradient with simplified diamond</li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- Color Palette -->
+        <div class="logo-section">
+            <h2 class="logo-title">Brand Color Palette</h2>
+            <p class="logo-description">
+                The color palette represents luxury, elegance, and natural beauty.
+            </p>
+            <div class="color-palette">
+                <div class="color-swatch">
+                    <div class="color-box" style="background: #d4af37;"></div>
+                    <div class="color-name">Primary Gold</div>
+                    <div class="color-hex">#d4af37</div>
+                </div>
+                <div class="color-swatch">
+                    <div class="color-box" style="background: #f4d03f;"></div>
+                    <div class="color-name">Light Gold</div>
+                    <div class="color-hex">#f4d03f</div>
+                </div>
+                <div class="color-swatch">
+                    <div class="color-box" style="background: #c9a635;"></div>
+                    <div class="color-name">Bronze</div>
+                    <div class="color-hex">#c9a635</div>
+                </div>
+                <div class="color-swatch">
+                    <div class="color-box" style="background: #2c3e50;"></div>
+                    <div class="color-name">Dark Slate</div>
+                    <div class="color-hex">#2c3e50</div>
+                </div>
+                <div class="color-swatch">
+                    <div class="color-box" style="background: #34495e;"></div>
+                    <div class="color-name">Charcoal</div>
+                    <div class="color-hex">#34495e</div>
+                </div>
+                <div class="color-swatch">
+                    <div class="color-box" style="background: #ffffff; border: 1px solid #ecf0f1;"></div>
+                    <div class="color-name">White</div>
+                    <div class="color-hex">#ffffff</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-note">
+            <p><strong>💎 Mahalakshmi Granites & Marbles</strong></p>
+            <p>Premium Logo Design • Version 2.0 • October 2025</p>
+            <p style="margin-top: 10px; font-size: 12px;">
+                All logos are SVG format for perfect scaling at any size.<br>
+                View this file in a browser to see the logos in action.
+            </p>
+        </div>
+    </div>
+</body>
+</html>
+
+

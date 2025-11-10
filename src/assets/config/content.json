@@ -1,0 +1,101 @@
+{
+  "homepage": {
+    "hero": {
+      "title": "Premium Granites & Marbles",
+      "subtitle": "Transform Your Space with Natural Elegance",
+      "description": "Discover our exquisite collection of premium granites and marbles sourced from the finest quarries. Quality craftsmanship, timeless beauty.",
+      "ctaButton": "Explore Collection",
+      "ctaLink": "/products"
+    },
+    "features": [
+      {
+        "icon": "🎯",
+        "title": "Premium Quality",
+        "description": "We source the finest quality granites and marbles from around the world."
+      },
+      {
+        "icon": "⚡",
+        "title": "Expert Installation",
+        "description": "Professional installation services with attention to every detail."
+      },
+      {
+        "icon": "💎",
+        "title": "Custom Designs",
+        "description": "Tailored solutions to match your unique style and requirements."
+      },
+      {
+        "icon": "🛡️",
+        "title": "Durability Guaranteed",
+        "description": "Long-lasting materials that stand the test of time."
+      }
+    ]
+  },
+  "about": {
+    "mission": "To provide our customers with the highest quality natural stones and exceptional service, transforming their spaces into works of art while maintaining ethical business practices and sustainable sourcing.",
+    "vision": "To be the most trusted and preferred granite and marble supplier in the region, known for our quality, innovation, and customer-centric approach, while setting new standards in the industry.",
+    "values": [
+      {
+        "icon": "✨",
+        "title": "Quality First",
+        "description": "We never compromise on the quality of our materials and workmanship."
+      },
+      {
+        "icon": "🤝",
+        "title": "Customer Focus",
+        "description": "Your satisfaction is our top priority in everything we do."
+      },
+      {
+        "icon": "💯",
+        "title": "Integrity",
+        "description": "Honest pricing, transparent processes, and reliable service."
+      },
+      {
+        "icon": "🎨",
+        "title": "Innovation",
+        "description": "Constantly updating our collection with latest trends and designs."
+      }
+    ]
+  },
+  "services": [
+    {
+      "title": "Kitchen Countertops",
+      "description": "Transform your kitchen with premium granite and marble countertops",
+      "features": ["Heat Resistant", "Stain Resistant", "Easy to Clean", "Custom Edges"]
+    },
+    {
+      "title": "Flooring",
+      "description": "Elegant and durable stone flooring for residential and commercial spaces",
+      "features": ["Anti-Slip Options", "Various Finishes", "Long-lasting", "Easy Maintenance"]
+    },
+    {
+      "title": "Wall Cladding",
+      "description": "Add sophistication with natural stone wall installations",
+      "features": ["Indoor & Outdoor", "Custom Patterns", "Weather Resistant", "Unique Designs"]
+    },
+    {
+      "title": "Custom Fabrication",
+      "description": "Tailored stone solutions for your specific requirements",
+      "features": ["Custom Cuts", "Edge Profiles", "Special Finishes", "Expert Craftsmen"]
+    }
+  ],
+  "footer": {
+    "quickLinks": [
+      {"label": "Home", "url": "/"},
+      {"label": "Products", "url": "/products"},
+      {"label": "Services", "url": "/services"},
+      {"label": "About Us", "url": "/about"},
+      {"label": "Contact", "url": "/contact"}
+    ],
+    "products": [
+      {"label": "Black Pearl Granite", "url": "/products"},
+      {"label": "Steel Gray Granite", "url": "/products"},
+      {"label": "S White & P White", "url": "/products"},
+      {"label": "JK Brown Marble", "url": "/products"},
+      {"label": "Rajasthani Marbles", "url": "/products"}
+    ]
+  }
+}
+
+
+
+

@@ -1,0 +1,95 @@
+<!-- Hero Section -->
+<section class="hero">
+  <div class="hero-overlay"></div>
+  <div class="container">
+    <div class="hero-content">
+      <h1 class="fade-in-up">Mahalakshmi Granites & Marbles</h1>
+      <p class="fade-in-up">Transform Your Space with Premium Natural Stones</p>
+      <div class="hero-buttons fade-in-up">
+        <a routerLink="/products" class="btn btn-primary">Explore Products</a>
+        <a routerLink="/contact" class="btn btn-secondary">Get Quote</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Features Section -->
+<section class="section features">
+  <div class="container">
+    <div class="section-title">
+      <h2>Why Choose Us</h2>
+      <p>Experience excellence in every stone, precision in every installation</p>
+    </div>
+
+    <div class="features-grid">
+      <div class="feature-card" *ngFor="let feature of features">
+        <div class="feature-icon">{{ feature.icon }}</div>
+        <h3>{{ feature.title }}</h3>
+        <p>{{ feature.description }}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Popular Products Section -->
+<section class="section popular-products">
+  <div class="container">
+    <div class="section-title">
+      <h2>Popular Collections</h2>
+      <p>Discover our most sought-after granites and marbles</p>
+    </div>
+
+    <div class="products-grid">
+      <div class="product-card" *ngFor="let product of popularProducts">
+        <div class="product-image">
+          <div class="placeholder-image">{{ product.image }}</div>
+        </div>
+        <div class="product-info">
+          <h3>{{ product.name }}</h3>
+          <p class="product-type">{{ product.type }}</p>
+          <a routerLink="/products" class="btn btn-primary">View Details</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center mt-40">
+      <a routerLink="/products" class="btn btn-secondary">View All Products</a>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta-section">
+  <div class="container">
+    <div class="cta-content">
+      <h2>Ready to Transform Your Space?</h2>
+      <p>Get in touch with us today for a free consultation and quote</p>
+      <a routerLink="/contact" class="btn btn-primary">Contact Us Now</a>
+    </div>
+  </div>
+</section>
+
+<!-- Stats Section -->
+<section class="section stats">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-item">
+        <h3>100+</h3>
+        <p>Happy Clients</p>
+      </div>
+      <div class="stat-item">
+        <h3>150+</h3>
+        <p>Projects Completed</p>
+      </div>
+      <div class="stat-item">
+        <h3>22+</h3>
+        <p>Product Varieties</p>
+      </div>
+      <div class="stat-item">
+        <h3>2</h3>
+        <p>Years of Expertise</p>
+      </div>
+    </div>
+  </div>
+</section>
+

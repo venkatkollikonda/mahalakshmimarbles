@@ -1,0 +1,78 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background circle with gradient -->
+  <defs>
+    <linearGradient id="marbleGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2c3e50;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#34495e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1a252f;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="accentGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#d4af37;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f4d03f;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+  
+  <!-- Outer circle -->
+  <circle cx="100" cy="100" r="95" fill="url(#marbleGradient)" filter="url(#shadow)"/>
+  
+  <!-- Marble texture effect (subtle pattern) -->
+  <path d="M 40 80 Q 60 70, 80 80 T 120 80 T 160 80" 
+        stroke="rgba(255,255,255,0.1)" 
+        stroke-width="2" 
+        fill="none"/>
+  <path d="M 50 110 Q 70 100, 90 110 T 130 110 T 170 110" 
+        stroke="rgba(255,255,255,0.1)" 
+        stroke-width="2" 
+        fill="none"/>
+  <path d="M 30 140 Q 50 130, 70 140 T 110 140 T 150 140" 
+        stroke="rgba(255,255,255,0.1)" 
+        stroke-width="2" 
+        fill="none"/>
+  
+  <!-- Geometric diamond shape representing granite/marble -->
+  <g transform="translate(100, 85)">
+    <!-- Top diamond -->
+    <path d="M 0,-30 L 25,-10 L 0,15 L -25,-10 Z" 
+          fill="url(#accentGradient)" 
+          opacity="0.9"/>
+    
+    <!-- Bottom facets -->
+    <path d="M 0,15 L 25,-10 L 20,5 Z" 
+          fill="#c9a635" 
+          opacity="0.8"/>
+    <path d="M 0,15 L -25,-10 L -20,5 Z" 
+          fill="#b8941f" 
+          opacity="0.8"/>
+    
+    <!-- Shine effect -->
+    <path d="M -8,-18 L 0,-30 L 8,-18 Z" 
+          fill="rgba(255,255,255,0.4)"/>
+  </g>
+  
+  <!-- Company name curved around bottom -->
+  <path id="textPath" 
+        d="M 30,150 Q 100,170 170,150" 
+        fill="none"/>
+  
+  <!-- Text -->
+  <text font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#d4af37">
+    <textPath href="#textPath" startOffset="50%" text-anchor="middle">
+      MAHALAKSHMI
+    </textPath>
+  </text>
+  
+  <text x="100" y="175" 
+        font-family="Georgia, serif" 
+        font-size="11" 
+        font-weight="normal" 
+        fill="#ecf0f1" 
+        text-anchor="middle"
+        letter-spacing="3">
+    GRANITES
+  </text>
+</svg>
+
+

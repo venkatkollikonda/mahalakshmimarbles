@@ -1,0 +1,83 @@
+<!-- Page Header -->
+<section class="page-header">
+  <div class="container">
+    <h1>Our Products</h1>
+    <p>Discover our premium collection of granites and marbles</p>
+  </div>
+</section>
+
+<!-- Products Section -->
+<section class="section products-section">
+  <div class="container">
+    <!-- Category Filter -->
+    <div class="category-filter">
+      <button 
+        *ngFor="let category of categories"
+        [class.active]="selectedCategory === category.id"
+        (click)="selectCategory(category.id)"
+        class="filter-btn">
+        {{ category.name }}
+      </button>
+    </div>
+
+    <!-- Products Grid -->
+    <div class="products-grid">
+      <div class="product-card" *ngFor="let product of filteredProducts">
+        <div class="product-image">
+          <div class="placeholder">{{ product.name }}</div>
+          <div class="product-badge">{{ product.origin }}</div>
+        </div>
+        <div class="product-content">
+          <h3>{{ product.name }}</h3>
+          <p class="product-description">{{ product.description }}</p>
+          
+          <div class="product-features">
+            <span *ngFor="let feature of product.features" class="feature-tag">
+              ✓ {{ feature }}
+            </span>
+          </div>
+
+          <div class="product-actions">
+            <button class="btn btn-primary">Request Quote</button>
+            <button class="btn btn-secondary">View Details</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Empty State -->
+    <div *ngIf="filteredProducts.length === 0" class="empty-state">
+      <h3>No products found</h3>
+      <p>Try selecting a different category</p>
+    </div>
+  </div>
+</section>
+
+<!-- Product Info Section -->
+<section class="section product-info-section">
+  <div class="container">
+    <div class="info-grid">
+      <div class="info-card">
+        <div class="info-icon">📦</div>
+        <h3>Quality Assurance</h3>
+        <p>Every stone is carefully selected and inspected for quality before delivery</p>
+      </div>
+      <div class="info-card">
+        <div class="info-icon">🚚</div>
+        <h3>Safe Delivery</h3>
+        <p>Professional packaging and safe transportation to your location</p>
+      </div>
+      <div class="info-card">
+        <div class="info-icon">🔧</div>
+        <h3>Expert Installation</h3>
+        <p>Skilled craftsmen ensure perfect installation with attention to detail</p>
+      </div>
+      <div class="info-card">
+        <div class="info-icon">💯</div>
+        <h3>Satisfaction Guaranteed</h3>
+        <p>We stand behind our products with comprehensive warranties</p>
+      </div>
+    </div>
+  </div>
+</section>
+

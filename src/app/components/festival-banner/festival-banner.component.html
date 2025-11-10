@@ -1,0 +1,54 @@
+<div class="festival-banner" 
+     *ngIf="showBanner && activeFestival" 
+     [class]="'festival-banner--' + activeFestival.theme">
+  
+  <!-- Diya/Lamp Animation for Diwali -->
+  <div class="decorations" *ngIf="activeFestival.theme === 'diwali'">
+    <div class="diya diya-1">🪔</div>
+    <div class="diya diya-2">🪔</div>
+    <div class="diya diya-3">🪔</div>
+    <div class="sparkle sparkle-1">✨</div>
+    <div class="sparkle sparkle-2">✨</div>
+    <div class="sparkle sparkle-3">✨</div>
+    <div class="sparkle sparkle-4">✨</div>
+    <div class="sparkle sparkle-5">✨</div>
+  </div>
+
+  <!-- Flag Animation for National Days -->
+  <div class="decorations" *ngIf="activeFestival.theme === 'republic-day' || activeFestival.theme === 'independence-day'">
+    <div class="flag flag-1">🇮🇳</div>
+    <div class="flag flag-2">🇮🇳</div>
+    <div class="flag flag-3">🇮🇳</div>
+  </div>
+
+  <!-- Colors for Holi -->
+  <div class="decorations" *ngIf="activeFestival.theme === 'holi'">
+    <div class="color-splash color-1"></div>
+    <div class="color-splash color-2"></div>
+    <div class="color-splash color-3"></div>
+  </div>
+
+  <!-- Confetti for New Year -->
+  <div class="decorations" *ngIf="activeFestival.theme === 'new-year'">
+    <div class="confetti confetti-1">🎉</div>
+    <div class="confetti confetti-2">🎊</div>
+    <div class="confetti confetti-3">✨</div>
+  </div>
+
+  <div class="festival-content">
+    <div class="festival-emoji">{{ activeFestival.emoji }}</div>
+    
+    <div class="festival-text">
+      <h3 class="festival-greeting">{{ activeFestival.greeting }}</h3>
+      <p class="festival-message">{{ activeFestival.message }}</p>
+      <p class="festival-submessage">{{ activeFestival.subMessage }}</p>
+    </div>
+
+    <button class="close-button" (click)="closeBanner()" aria-label="Close banner">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+        <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+    </button>
+  </div>
+</div>
+

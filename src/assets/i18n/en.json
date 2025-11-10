@@ -1,0 +1,133 @@
+{
+  "common": {
+    "companyName": "Mahalakshmi Granites and Marbles",
+    "tagline": "Premium Quality Stone Solutions",
+    "callNow": "Call Now",
+    "getQuote": "Get Quote",
+    "learnMore": "Learn More",
+    "viewMore": "View More",
+    "contactUs": "Contact Us",
+    "readMore": "Read More",
+    "explore": "Explore",
+    "shopNow": "Shop Now"
+  },
+  "nav": {
+    "home": "Home",
+    "products": "Products",
+    "services": "Services",
+    "gallery": "Gallery",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "home": {
+    "heroTitle": "Premium Granites & Marbles",
+    "heroSubtitle": "Transform Your Space with Natural Elegance",
+    "heroDescription": "Discover our exquisite collection of premium granites and marbles sourced from the finest quarries. Quality craftsmanship, timeless beauty.",
+    "exploreCollection": "Explore Collection",
+    "popularProducts": "Popular Collection",
+    "whyChooseUs": "Why Choose Us",
+    "qualityTitle": "Premium Quality",
+    "qualityDesc": "We source the finest quality granites and marbles.",
+    "expertTitle": "Expert Installation",
+    "expertDesc": "Professional installation services with attention to detail.",
+    "customTitle": "Custom Designs",
+    "customDesc": "Tailored solutions to match your unique style.",
+    "durabilityTitle": "Durability Guaranteed",
+    "durabilityDesc": "Long-lasting materials that stand the test of time.",
+    "stats": {
+      "clients": "Happy Clients",
+      "projects": "Projects Completed",
+      "products": "Product Varieties",
+      "experience": "Years of Expertise"
+    }
+  },
+  "products": {
+    "title": "Our Products",
+    "subtitle": "Discover Premium Granites & Marbles",
+    "allProducts": "All Products",
+    "granites": "Granites",
+    "marbles": "Marbles",
+    "features": "Features",
+    "origin": "Origin",
+    "viewDetails": "View Details"
+  },
+  "services": {
+    "title": "Our Services",
+    "subtitle": "Professional Stone Solutions",
+    "kitchen": "Kitchen Countertops",
+    "kitchenDesc": "Transform your kitchen with premium countertops",
+    "flooring": "Flooring",
+    "flooringDesc": "Elegant and durable stone flooring",
+    "bathroom": "Bathroom Design",
+    "bathroomDesc": "Luxury bathroom installations",
+    "commercial": "Commercial Projects",
+    "commercialDesc": "Large-scale commercial installations"
+  },
+  "gallery": {
+    "title": "Our Gallery",
+    "subtitle": "Explore Our Stunning Projects & Transformations",
+    "browseCategory": "Browse by Category",
+    "allProjects": "All Projects",
+    "kitchen": "Kitchen",
+    "flooring": "Flooring",
+    "bathroom": "Bathroom",
+    "commercial": "Commercial",
+    "outdoor": "Outdoor",
+    "viewDetails": "View Details",
+    "noProjects": "No projects found",
+    "tryCategory": "Try selecting a different category",
+    "ctaTitle": "Ready to Start Your Project?",
+    "ctaText": "Let us transform your space with premium granites and marbles"
+  },
+  "about": {
+    "title": "About Us",
+    "subtitle": "Your Trusted Partner in Premium Stones",
+    "welcomeTitle": "Welcome to Mahalakshmi Granites & Marbles",
+    "mission": "Our Mission",
+    "vision": "Our Vision",
+    "values": "Our Values",
+    "experience": "Years of Experience"
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "Get in Touch with Our Team",
+    "visitUs": "Visit Us",
+    "callUs": "Call Us",
+    "emailUs": "Email Us",
+    "businessHours": "Business Hours",
+    "name": "Your Name",
+    "email": "Your Email",
+    "phone": "Phone Number",
+    "message": "Your Message",
+    "send": "Send Message",
+    "location": "Guntur, Andhra Pradesh",
+    "whatsappAvailable": "WhatsApp Available"
+  },
+  "footer": {
+    "description": "Your trusted partner for premium quality granites and marbles. We transform spaces with natural elegance.",
+    "quickLinks": "Quick Links",
+    "ourProducts": "Our Products",
+    "contactInfo": "Contact Info",
+    "followUs": "Follow Us",
+    "copyright": "All rights reserved",
+    "blackPearl": "Black Pearl Granite",
+    "steelGray": "Steel Gray Granite",
+    "swhitePwhite": "S White & P White",
+    "jkBrown": "JK Brown Marble",
+    "rajasthani": "Rajasthani Marbles"
+  },
+  "theme": {
+    "light": "Light Mode",
+    "dark": "Dark Mode",
+    "toggle": "Toggle Theme"
+  },
+  "language": {
+    "english": "English",
+    "telugu": "Telugu",
+    "toggle": "Toggle Language"
+  }
+}
+
+
+
+

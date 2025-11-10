@@ -1,0 +1,41 @@
+{
+  "companyName": "Mahalakshmi Granites and Marbles",
+  "tagline": "Premium Quality Stone Solutions",
+  "description": "Your trusted partner for premium quality granites and marbles. We transform spaces with natural elegance.",
+  "established": 2023,
+  "experience": "2 years",
+  "location": {
+    "city": "Guntur",
+    "state": "Andhra Pradesh",
+    "country": "India",
+    "googleMapsUrl": "https://www.google.com/maps/place/Mahalakshmi+Granites+and+Marbles/@16.3474154,80.4382231,17z"
+  },
+  "contact": {
+    "phone": "+91 97001 76998",
+    "phoneDisplay": "+91 97001 76998",
+    "whatsapp": "919700176998",
+    "email": "info@mahalakshmigranites.com",
+    "salesEmail": "sales@mahalakshmigranites.com"
+  },
+  "businessHours": {
+    "weekdays": "Mon - Sat: 9:00 AM - 7:00 PM",
+    "sunday": "Sunday: 10:00 AM - 5:00 PM"
+  },
+  "statistics": {
+    "clients": "100+",
+    "projects": "150+",
+    "products": "22+",
+    "experience": "2"
+  },
+  "socialMedia": {
+    "facebook": "#",
+    "instagram": "#",
+    "whatsappLink": "https://wa.me/919700176998",
+    "twitter": "#",
+    "linkedin": "#"
+  }
+}
+
+
+
+

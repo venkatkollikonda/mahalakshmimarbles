@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Festival Themes Preview - Mahalakshmi Granites</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: #f5f5f5;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 36px;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 40px;
+            font-size: 18px;
+        }
+
+        .theme-section {
+            margin-bottom: 50px;
+        }
+
+        .theme-title {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 15px;
+            font-size: 28px;
+            color: #333;
+        }
+
+        .theme-emoji {
+            font-size: 36px;
+        }
+
+        .theme-info {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 15px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .info-row {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 10px;
+        }
+
+        .info-label {
+            font-weight: 700;
+            color: #333;
+            min-width: 100px;
+        }
+
+        .info-value {
+            color: #666;
+        }
+
+        .color-swatches {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .color-swatch {
+            width: 50px;
+            height: 50px;
+            border-radius: 8px;
+            border: 2px solid white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+
+        /* Announcement Bar Styles */
+        .announcement-bar {
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+            animation: float 3s ease-in-out infinite;
+            position: relative;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-3px); }
+        }
+
+        .announcement-content {
+            max-width: 1400px;
+            width: 100%;
+            padding: 0 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .announcement-left {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex: 1;
+        }
+
+        .announcement-icon {
+            font-size: 24px;
+            animation: bounce 2s ease-in-out infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-4px); }
+        }
+
+        .announcement-text {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: #ffffff;
+            font-size: 15px;
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+        }
+
+        .announcement-text strong {
+            font-weight: 700;
+            font-size: 16px;
+        }
+
+        .announcement-right {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .announcement-cta {
+            padding: 8px 18px;
+            background: rgba(255, 255, 255, 0.25);
+            border: 1.5px solid rgba(255, 255, 255, 0.5);
+            border-radius: 20px;
+            color: #ffffff;
+            font-size: 14px;
+            font-weight: 700;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .announcement-cta:hover {
+            background: rgba(255, 255, 255, 0.35);
+            transform: translateY(-2px);
+        }
+
+        .announcement-close {
+            width: 32px;
+            height: 32px;
+            background: rgba(255, 255, 255, 0.2);
+            border: 1.5px solid rgba(255, 255, 255, 0.4);
+            border-radius: 50%;
+            color: #ffffff;
+            cursor: pointer;
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+        .announcement-close:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: scale(1.1) rotate(90deg);
+        }
+
+        /* Theme-specific styles */
+        .diwali-theme {
+            background: linear-gradient(90deg, 
+                #FF6B35 0%,
+                #F7931E 25%,
+                #FFD700 50%,
+                #F7931E 75%,
+                #FF6B35 100%
+            );
+            background-size: 200% 100%;
+            animation: float 3s ease-in-out infinite, gradientFlow 8s ease infinite;
+        }
+
+        .newyear-theme {
+            background: linear-gradient(90deg,
+                #FFD700 0%,
+                #FF69B4 33.33%,
+                #00CED1 66.66%,
+                #FFD700 100%
+            );
+            background-size: 200% 100%;
+            animation: float 3s ease-in-out infinite, gradientFlow 8s ease infinite;
+        }
+
+        .republic-theme {
+            background: linear-gradient(90deg,
+                #FF9933 0%,
+                #FFFFFF 33.33%,
+                #FFFFFF 66.66%,
+                #138808 100%
+            );
+        }
+
+        .holi-theme {
+            background: linear-gradient(90deg,
+                #FF006E 0%,
+                #8338EC 20%,
+                #3A86FF 40%,
+                #FFBE0B 60%,
+                #FB5607 80%,
+                #FF006E 100%
+            );
+            background-size: 200% 100%;
+            animation: float 3s ease-in-out infinite, gradientFlow 10s ease infinite;
+        }
+
+        @keyframes gradientFlow {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        .note {
+            background: #fffbea;
+            border-left: 4px solid #FFD700;
+            padding: 15px 20px;
+            margin-top: 40px;
+            border-radius: 8px;
+        }
+
+        .note strong {
+            color: #d97706;
+        }
+
+        @media (max-width: 768px) {
+            .announcement-bar {
+                height: auto;
+                min-height: 50px;
+                padding: 12px 0;
+            }
+
+            .announcement-left {
+                flex-wrap: wrap;
+            }
+
+            .announcement-text {
+                font-size: 14px;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎨 All Festival Themes Preview</h1>
+        <p class="subtitle">See how your announcement bar looks for each festival</p>
+
+        <!-- 1. Diwali -->
+        <div class="theme-section">
+            <h2 class="theme-title">
+                <span class="theme-emoji">🪔</span>
+                <span>1. Diwali Theme (Currently Active)</span>
+            </h2>
+            
+            <div class="theme-info">
+                <div class="info-row">
+                    <span class="info-label">Colors:</span>
+                    <div class="color-swatches">
+                        <div class="color-swatch" style="background: #FF6B35;" title="Deep Orange"></div>
+                        <div class="color-swatch" style="background: #F7931E;" title="Golden Orange"></div>
+                        <div class="color-swatch" style="background: #FFD700;" title="Pure Gold"></div>
+                    </div>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">Animation:</span>
+                    <span class="info-value">Flowing gradient + Floating sparkles</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">Vibe:</span>
+                    <span class="info-value">Warm, Festive, Auspicious</span>
+                </div>
+            </div>
+
+            <div class="announcement-bar diwali-theme">
+                <div class="announcement-content">
+                    <div class="announcement-left">
+                        <span class="announcement-icon">🪔</span>
+                        <span class="announcement-text">
+                            <strong>Happy Diwali!</strong>
+                            <span>May this Festival of Lights brighten your home with happiness, prosperity, and success!</span>
+                        </span>
+                    </div>
+                    <div class="announcement-right">
+                        <a href="tel:+919700176998" class="announcement-cta">📞 Call Now</a>
+                        <button class="announcement-close">×</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 2. New Year -->
+        <div class="theme-section">
+            <h2 class="theme-title">
+                <span class="theme-emoji">🎉</span>
+                <span>2. New Year Theme</span>
+            </h2>
+            
+            <div class="theme-info">
+                <div class="info-row">
+                    <span class="info-label">Colors:</span>
+                    <div class="color-swatches">
+                        <div class="color-swatch" style="background: #FFD700;" title="Gold"></div>
+                        <div class="color-swatch" style="background: #FF69B4;" title="Hot Pink"></div>
+                        <div class="color-swatch" style="background: #00CED1;" title="Dark Turquoise"></div>
+                    </div>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">Animation:</span>
+                    <span class="info-value">Flowing rainbow gradient</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">Vibe:</span>
+                    <span class="info-value">Celebratory, Energetic, Optimistic</span>
+                </div>
+            </div>
+
+            <div class="announcement-bar newyear-theme">
+                <div class="announcement-content">
+                    <div class="announcement-left">
+                        <span class="announcement-icon">🎉</span>
+                        <span class="announcement-text">
+                            <strong>Happy New Year 2026!</strong>
+                            <span>Wishing you a prosperous and joyful New Year filled with success!</span>
+                        </span>
+                    </div>
+                    <div class="announcement-right">
+                        <a href="tel:+919700176998" class="announcement-cta">📞 Call Now</a>
+                        <button class="announcement-close">×</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3. Republic Day -->
+        <div class="theme-section">
+            <h2 class="theme-title">
+                <span class="theme-emoji">🇮🇳</span>
+                <span>3. Republic Day Theme</span>
+            </h2>
+            
+            <div class="theme-info">
+                <div class="info-row">
+                    <span class="info-label">Colors:</span>
+                    <div class="color-swatches">
+                        <div class="color-swatch" style="background: #FF9933;" title="Saffron"></div>
+                        <div class="color-swatch" style="background: #FFFFFF; border-color: #ddd;" title="White"></div>
+                        <div class="color-swatch" style="background: #138808;" title="India Green"></div>
+                    </div>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">Animation:</span>
+                    <span class="info-value">Static gradient (respectful)</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">Vibe:</span>
+                    <span class="info-value">Patriotic, Respectful, Proud</span>
+                </div>
+            </div>
+
+            <div class="announcement-bar republic-theme">
+                <div class="announcement-content">
+                    <div class="announcement-left">
+                        <span class="announcement-icon">🇮🇳</span>
+                        <span class="announcement-text">
+                            <strong>Happy Republic Day!</strong>
+                            <span>Celebrating 77 years of Indian Democracy. Proud to serve our nation!</span>
+                        </span>
+                    </div>
+                    <div class="announcement-right">
+                        <a href="tel:+919700176998" class="announcement-cta">📞 Call Now</a>
+                        <button class="announcement-close">×</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 4. Holi -->
+        <div class="theme-section">
+            <h2 class="theme-title">
+                <span class="theme-emoji">🎨</span>
+                <span>4. Holi Theme</span>
+            </h2>
+            
+            <div class="theme-info">
+                <div class="info-row">
+                    <span class="info-label">Colors:</span>
+                    <div class="color-swatches">
+                        <div class="color-swatch" style="background: #FF006E;" title="Bright Pink"></div>
+                        <div class="color-swatch" style="background: #8338EC;" title="Purple"></div>
+                        <div class="color-swatch" style="background: #3A86FF;" title="Blue"></div>
+                        <div class="color-swatch" style="background: #FFBE0B;" title="Yellow"></div>
+                        <div class="color-swatch" style="background: #FB5607;" title="Orange"></div>
+                    </div>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">Animation:</span>
+                    <span class="info-value">Multi-color flowing gradient</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">Vibe:</span>
+                    <span class="info-value">Vibrant, Playful, Joyful</span>
+                </div>
+            </div>
+
+            <div class="announcement-bar holi-theme">
+                <div class="announcement-content">
+                    <div class="announcement-left">
+                        <span class="announcement-icon">🎨</span>
+                        <span class="announcement-text">
+                            <strong>Happy Holi!</strong>
+                            <span>May your life be as colorful and joyful as the festival of Holi!</span>
+                        </span>
+                    </div>
+                    <div class="announcement-right">
+                        <a href="tel:+919700176998" class="announcement-cta">📞 Call Now</a>
+                        <button class="announcement-close">×</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 5. Independence Day -->
+        <div class="theme-section">
+            <h2 class="theme-title">
+                <span class="theme-emoji">🇮🇳</span>
+                <span>5. Independence Day Theme</span>
+            </h2>
+            
+            <div class="theme-info">
+                <div class="info-row">
+                    <span class="info-label">Colors:</span>
+                    <div class="color-swatches">
+                        <div class="color-swatch" style="background: #FF9933;" title="Saffron"></div>
+                        <div class="color-swatch" style="background: #FFFFFF; border-color: #ddd;" title="White"></div>
+                        <div class="color-swatch" style="background: #138808;" title="India Green"></div>
+                    </div>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">Animation:</span>
+                    <span class="info-value">Static gradient (respectful)</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">Vibe:</span>
+                    <span class="info-value">Patriotic, Freedom, Pride</span>
+                </div>
+            </div>
+
+            <div class="announcement-bar republic-theme">
+                <div class="announcement-content">
+                    <div class="announcement-left">
+                        <span class="announcement-icon">🇮🇳</span>
+                        <span class="announcement-text">
+                            <strong>Happy Independence Day!</strong>
+                            <span>Celebrating 79 years of freedom. Proud to be Indian!</span>
+                        </span>
+                    </div>
+                    <div class="announcement-right">
+                        <a href="tel:+919700176998" class="announcement-cta">📞 Call Now</a>
+                        <button class="announcement-close">×</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="note">
+            <strong>📌 Note:</strong> These are live previews showing exactly how each festival theme looks on your website. All themes automatically show on their respective dates. The system is fully automated - no manual activation needed!
+        </div>
+    </div>
+</body>
+</html>
+
+
+
+

@@ -1,0 +1,96 @@
+{
+  "festivals": [
+    {
+      "id": "diwali-2025",
+      "name": "Diwali",
+      "startDate": "2025-10-20",
+      "endDate": "2025-10-21",
+      "greeting": "Happy Diwali!",
+      "message": "May this Festival of Lights brighten your home with happiness, prosperity, and success!",
+      "subMessage": "✨ Special Diwali Offers Available ✨",
+      "theme": "diwali",
+      "colors": {
+        "primary": "#FF6B35",
+        "secondary": "#F7931E",
+        "accent": "#FFD700"
+      },
+      "emoji": "🪔",
+      "showOnPages": ["home", "all"]
+    },
+    {
+      "id": "new-year-2026",
+      "name": "New Year",
+      "startDate": "2026-01-01",
+      "endDate": "2026-01-02",
+      "greeting": "Happy New Year 2026!",
+      "message": "Wishing you a prosperous and joyful New Year filled with success!",
+      "subMessage": "🎊 New Year, New Beginnings! 🎊",
+      "theme": "new-year",
+      "colors": {
+        "primary": "#FFD700",
+        "secondary": "#FF69B4",
+        "accent": "#00CED1"
+      },
+      "emoji": "🎉",
+      "showOnPages": ["all"]
+    },
+    {
+      "id": "republic-day-2026",
+      "name": "Republic Day",
+      "startDate": "2026-01-26",
+      "endDate": "2026-01-26",
+      "greeting": "Happy Republic Day!",
+      "message": "Celebrating 77 years of Indian Democracy. Proud to serve our nation!",
+      "subMessage": "🇮🇳 Jai Hind! 🇮🇳",
+      "theme": "republic-day",
+      "colors": {
+        "primary": "#FF9933",
+        "secondary": "#138808",
+        "accent": "#000080"
+      },
+      "emoji": "🇮🇳",
+      "showOnPages": ["all"]
+    },
+    {
+      "id": "holi-2026",
+      "name": "Holi",
+      "startDate": "2026-03-14",
+      "endDate": "2026-03-14",
+      "greeting": "Happy Holi!",
+      "message": "May your life be as colorful and joyful as the festival of Holi!",
+      "subMessage": "🎨 Celebrate with colors! 🎨",
+      "theme": "holi",
+      "colors": {
+        "primary": "#FF006E",
+        "secondary": "#8338EC",
+        "accent": "#FFBE0B"
+      },
+      "emoji": "🎨",
+      "showOnPages": ["all"]
+    },
+    {
+      "id": "independence-day-2026",
+      "name": "Independence Day",
+      "startDate": "2026-08-15",
+      "endDate": "2026-08-15",
+      "greeting": "Happy Independence Day!",
+      "message": "Celebrating 79 years of freedom. Proud to be Indian!",
+      "subMessage": "🇮🇳 Jai Hind! 🇮🇳",
+      "theme": "independence-day",
+      "colors": {
+        "primary": "#FF9933",
+        "secondary": "#138808",
+        "accent": "#000080"
+      },
+      "emoji": "🇮🇳",
+      "showOnPages": ["all"]
+    }
+  ],
+  "settings": {
+    "autoDismissAfter": 10000,
+    "showAnimation": true,
+    "allowDismiss": true,
+    "position": "top"
+  }
+}
+
