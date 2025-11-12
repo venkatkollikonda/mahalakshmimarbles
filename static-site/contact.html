@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Mahalakshmi Granites and Marbles</title>
+    <meta name="description" content="Get in touch with Mahalakshmi Granites and Marbles in Guntur, Andhra Pradesh. Request a quote or visit our showroom.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--space-10);
+            margin-top: var(--space-10);
+        }
+        
+        @media (max-width: 968px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .contact-info-card {
+            background: var(--surface);
+            padding: var(--space-6);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow);
+            margin-bottom: var(--space-5);
+        }
+        
+        .contact-info-card h3 {
+            display: flex;
+            align-items: center;
+            gap: var(--space-4);
+            margin-bottom: var(--space-4);
+        }
+        
+        .contact-info-card .icon {
+            font-size: 2rem;
+            color: var(--secondary);
+        }
+        
+        .form-group {
+            margin-bottom: var(--space-5);
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+        
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 0.875rem;
+            border: 2px solid var(--gray-300);
+            border-radius: var(--radius);
+            font-family: inherit;
+            font-size: 1rem;
+            background: var(--surface);
+            color: var(--text-primary);
+            transition: border-color var(--transition);
+        }
+        
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--secondary);
+        }
+        
+        .form-group textarea {
+            resize: vertical;
+            min-height: 150px;
+        }
+        
+        .map-container {
+            margin-top: var(--space-10);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .map-container iframe {
+            width: 100%;
+            height: 450px;
+            border: 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Announcement Bar -->
+    <div class="announcement-bar" id="announcementBar">
+        <div class="container">
+            <p class="announcement-text">🎉 Grand Opening Special - 10% Off All Products! 🎉</p>
+        </div>
+        <button class="announcement-close" id="announcementClose" aria-label="Close">&times;</button>
+    </div>
+
+    <!-- Festival Banner -->
+    <div class="festival-banner" id="festivalBanner" style="display: none;">
+        <div class="festival-content">
+            <h2 class="festival-title" id="festivalTitle"></h2>
+            <p class="festival-message" id="festivalMessage"></p>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">
+                    <span class="logo-icon">🏛️</span>
+                    <div class="logo-text">
+                        <span class="logo-main">Mahalakshmi</span>
+                        <span class="logo-sub">GRANITES & MARBLES</span>
+                    </div>
+                </a>
+                <ul class="nav-menu" id="navMenu">
+                    <li class="nav-item"><a href="index.html">Home</a></li>
+                    <li class="nav-item"><a href="products.html">Products</a></li>
+                    <li class="nav-item"><a href="services.html">Services</a></li>
+                    <li class="nav-item"><a href="gallery.html">Gallery</a></li>
+                    <li class="nav-item"><a href="about.html">About Us</a></li>
+                    <li class="nav-item"><a href="contact.html" class="active">Contact</a></li>
+                </ul>
+                <div class="header-actions">
+                    <button class="lang-switch" id="langSwitch" aria-label="Switch language">
+                        <span id="currentLang">EN</span>
+                    </button>
+                    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                        <span class="theme-icon">🌙</span>
+                    </button>
+                    <a href="contact.html" class="btn btn-primary btn-sm">Get Quote</a>
+                </div>
+                <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="hero" style="min-height: 400px; margin-top: 80px;">
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="fade-in-up">Contact Us</h1>
+                <p class="fade-in-up">We're Here to Help with Your Stone Needs</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Get In Touch</h2>
+                <p>Fill out the form below and we'll get back to you as soon as possible</p>
+            </div>
+
+            <div class="contact-grid">
+                <!-- Contact Form -->
+                <div>
+                    <form id="contactForm" onsubmit="window.MahalakshmiGranites.handleContactForm(event)">
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="service">Service Interest</label>
+                            <select id="service" name="service">
+                                <option value="">Select a service</option>
+                                <option value="granite">Granite Supply</option>
+                                <option value="marble">Marble Supply</option>
+                                <option value="installation">Installation Services</option>
+                                <option value="consultation">Consultation</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
+                    </form>
+                </div>
+
+                <!-- Contact Information -->
+                <div>
+                    <div class="contact-info-card">
+                        <h3>
+                            <span class="icon">📍</span>
+                            <span>Visit Our Showroom</span>
+                        </h3>
+                        <p>Guntur, Andhra Pradesh, India</p>
+                        <a href="https://www.google.com/maps/place/Mahalakshmi+Granites+and+Marbles/@16.3474154,80.4382231,17z" target="_blank" class="btn btn-secondary" style="margin-top: 1rem;">Get Directions</a>
+                    </div>
+
+                    <div class="contact-info-card">
+                        <h3>
+                            <span class="icon">📞</span>
+                            <span>Call Us</span>
+                        </h3>
+                        <p style="font-size: 1.25rem; font-weight: 600; color: var(--secondary);">+91 97001 76998</p>
+                        <p style="margin-top: 1rem; color: var(--text-secondary);">Mon - Sat: 9:00 AM - 7:00 PM<br>Sunday: 10:00 AM - 5:00 PM</p>
+                    </div>
+
+                    <div class="contact-info-card">
+                        <h3>
+                            <span class="icon">✉️</span>
+                            <span>Email Us</span>
+                        </h3>
+                        <p>General Inquiries:<br><strong>info@mahalakshmigranites.com</strong></p>
+                        <p style="margin-top: 1rem;">Sales:<br><strong>sales@mahalakshmigranites.com</strong></p>
+                    </div>
+
+                    <div class="contact-info-card">
+                        <h3>
+                            <span class="icon">💬</span>
+                            <span>WhatsApp</span>
+                        </h3>
+                        <p>Chat with us instantly for quick responses</p>
+                        <a href="https://wa.me/919700176998" target="_blank" class="btn btn-primary" style="margin-top: 1rem; background: #25d366;">Message on WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Map -->
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3826.5886827937773!2d80.43822311487474!3d16.347415388681253!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTbCsDIwJzUwLjciTiA4MMKwMjYnMTcuNiJF!5e0!3m2!1sen!2sin!4v1234567890123!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/919700176998" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+        <svg viewBox="0 0 32 32" fill="currentColor">
+            <path d="M16 0C7.164 0 0 7.164 0 16c0 2.829.737 5.487 2.028 7.794L.077 31.806l8.245-2.074A15.89 15.89 0 0016 32c8.836 0 16-7.164 16-16S24.836 0 16 0zm0 29.415c-2.518 0-4.878-.694-6.893-1.9l-.494-.293-5.122 1.289 1.32-4.965-.322-.512A13.25 13.25 0 012.585 16c0-7.401 6.014-13.415 13.415-13.415S29.415 8.599 29.415 16 23.401 29.415 16 29.415z"/>
+            <path d="M23.378 19.466c-.4-.2-2.37-1.169-2.737-1.303-.368-.133-.635-.2-.903.2-.267.4-1.036 1.303-1.27 1.57-.234.268-.469.302-.869.101-.4-.2-1.69-.623-3.218-1.986-1.19-1.061-1.994-2.371-2.228-2.771-.234-.4-.025-.616.176-.815.18-.179.4-.468.6-.702.2-.234.267-.4.4-.668.134-.267.067-.502-.033-.702-.1-.2-.903-2.176-1.237-2.979-.325-.782-.655-.676-.903-.688-.234-.012-.502-.015-.77-.015s-.703.1-1.071.502c-.368.4-1.404 1.372-1.404 3.346s1.437 3.88 1.637 4.147c.2.267 2.829 4.318 6.853 6.055.957.413 1.705.66 2.288.845.961.305 1.837.262 2.529.159.771-.115 2.37-.97 2.704-1.906.335-.936.335-1.738.234-1.906-.1-.167-.368-.267-.77-.467z"/>
+        </svg>
+    </a>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-main">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-col">
+                        <div class="footer-logo">
+                            <span class="logo-icon">🏛️</span>
+                            <div class="logo-text">
+                                <span class="logo-main">Mahalakshmi</span>
+                                <span class="logo-sub">GRANITES & MARBLES</span>
+                            </div>
+                        </div>
+                        <p class="footer-desc">Your trusted partner for premium quality granites and marbles.</p>
+                        <div class="social-links">
+                            <a href="#" class="social-link" aria-label="Facebook">📘</a>
+                            <a href="#" class="social-link" aria-label="Instagram">📷</a>
+                            <a href="https://wa.me/919700176998" class="social-link" aria-label="WhatsApp">💬</a>
+                        </div>
+                    </div>
+                    <div class="footer-col">
+                        <h4 class="footer-title">Quick Links</h4>
+                        <ul class="footer-links">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="products.html">Products</a></li>
+                            <li><a href="services.html">Services</a></li>
+                            <li><a href="gallery.html">Gallery</a></li>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4 class="footer-title">Our Services</h4>
+                        <ul class="footer-links">
+                            <li><a href="services.html">Granite Supply</a></li>
+                            <li><a href="services.html">Marble Supply</a></li>
+                            <li><a href="services.html">Installation</a></li>
+                            <li><a href="services.html">Consultation</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4 class="footer-title">Contact Us</h4>
+                        <ul class="footer-contact">
+                            <li><span class="icon">📍</span><span>Guntur, Andhra Pradesh</span></li>
+                            <li><span class="icon">📞</span><span>+91 97001 76998</span></li>
+                            <li><span class="icon">✉️</span><span>info@mahalakshmigranites.com</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="footer-bottom-content">
+                    <p>&copy; <span id="currentYear"></span> Mahalakshmi Granites and Marbles. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Products | Mahalakshmi Granites and Marbles</title>
+    <meta name="description" content="Explore our premium collection of granites and marbles. Quality natural stones for your home and commercial projects.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .product-filters {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+        }
+        
+        .filter-btn {
+            padding: 0.75rem 2rem;
+            border: 2px solid var(--gray-300);
+            background: var(--surface);
+            color: var(--text-primary);
+            border-radius: var(--radius);
+            cursor: pointer;
+            font-weight: 600;
+            transition: all var(--transition);
+        }
+        
+        .filter-btn.active,
+        .filter-btn:hover {
+            background: var(--accent-gold);
+            border-color: var(--accent-gold);
+            color: var(--gray-900);
+        }
+        
+        .product-badge {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: var(--accent-gold);
+            color: var(--gray-900);
+            padding: 0.5rem 1rem;
+            border-radius: var(--radius);
+            font-size: 0.875rem;
+            font-weight: 600;
+        }
+        
+        .product-card {
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <!-- Announcement Bar -->
+    <div class="announcement-bar" id="announcementBar">
+        <div class="container">
+            <p class="announcement-text">🎉 Grand Opening Special - 10% Off All Products! 🎉</p>
+        </div>
+        <button class="announcement-close" id="announcementClose" aria-label="Close">&times;</button>
+    </div>
+
+    <!-- Festival Banner -->
+    <div class="festival-banner" id="festivalBanner" style="display: none;">
+        <div class="festival-content">
+            <h2 class="festival-title" id="festivalTitle"></h2>
+            <p class="festival-message" id="festivalMessage"></p>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">
+                    <span class="logo-icon">🏛️</span>
+                    <div class="logo-text">
+                        <span class="logo-main">Mahalakshmi</span>
+                        <span class="logo-sub">GRANITES & MARBLES</span>
+                    </div>
+                </a>
+                <ul class="nav-menu" id="navMenu">
+                    <li class="nav-item"><a href="index.html">Home</a></li>
+                    <li class="nav-item"><a href="products.html" class="active">Products</a></li>
+                    <li class="nav-item"><a href="services.html">Services</a></li>
+                    <li class="nav-item"><a href="gallery.html">Gallery</a></li>
+                    <li class="nav-item"><a href="about.html">About Us</a></li>
+                    <li class="nav-item"><a href="contact.html">Contact</a></li>
+                </ul>
+                <div class="header-actions">
+                    <button class="lang-switch" id="langSwitch" aria-label="Switch language">
+                        <span id="currentLang">EN</span>
+                    </button>
+                    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                        <span class="theme-icon">🌙</span>
+                    </button>
+                    <a href="contact.html" class="btn btn-primary btn-sm">Get Quote</a>
+                </div>
+                <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="hero" style="min-height: 400px; margin-top: 80px;">
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="fade-in-up">Our Products</h1>
+                <p class="fade-in-up">Discover Premium Quality Granites & Marbles</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Explore Our Collection</h2>
+                <p>22+ Varieties of Premium Quality Granites and Marbles</p>
+            </div>
+
+            <!-- Filters -->
+            <div class="product-filters">
+                <button class="filter-btn active" data-filter="all">All Products</button>
+                <button class="filter-btn" data-filter="granite">Granites</button>
+                <button class="filter-btn" data-filter="marble">Marbles</button>
+                <button class="filter-btn" data-filter="imported">Imported</button>
+            </div>
+
+            <!-- Products Grid -->
+            <div class="products-grid" id="productsGrid">
+                <!-- Granites -->
+                <div class="product-card" data-category="granite">
+                    <div class="product-badge">Premium</div>
+                    <div class="product-image">
+                        <div class="placeholder-image">🪨 Black Galaxy</div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Black Galaxy</h3>
+                        <p class="product-type">Premium Granite</p>
+                        <a href="contact.html" class="btn btn-primary">Get Quote</a>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="granite">
+                    <div class="product-badge">Popular</div>
+                    <div class="product-image">
+                        <div class="placeholder-image">🪨 Kashmir White</div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Kashmir White</h3>
+                        <p class="product-type">Premium Granite</p>
+                        <a href="contact.html" class="btn btn-primary">Get Quote</a>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="granite imported">
+                    <div class="product-badge">Imported</div>
+                    <div class="product-image">
+                        <div class="placeholder-image">🪨 Vizag Blue</div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Vizag Blue</h3>
+                        <p class="product-type">Imported Granite</p>
+                        <a href="contact.html" class="btn btn-primary">Get Quote</a>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="granite">
+                    <div class="product-image">
+                        <div class="placeholder-image">🪨 Imperial Gold</div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Imperial Gold</h3>
+                        <p class="product-type">Premium Granite</p>
+                        <a href="contact.html" class="btn btn-primary">Get Quote</a>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="granite">
+                    <div class="product-image">
+                        <div class="placeholder-image">🪨 Tan Brown</div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Tan Brown</h3>
+                        <p class="product-type">Granite</p>
+                        <a href="contact.html" class="btn btn-primary">Get Quote</a>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="granite">
+                    <div class="product-image">
+                        <div class="placeholder-image">🪨 Steel Grey</div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Steel Grey</h3>
+                        <p class="product-type">Granite</p>
+                        <a href="contact.html" class="btn btn-primary">Get Quote</a>
+                    </div>
+                </div>
+
+                <!-- Marbles -->
+                <div class="product-card" data-category="marble">
+                    <div class="product-badge">Luxury</div>
+                    <div class="product-image">
+                        <div class="placeholder-image">🪨 Italian Marble</div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Italian Marble</h3>
+                        <p class="product-type">Luxury Marble</p>
+                        <a href="contact.html" class="btn btn-primary">Get Quote</a>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="marble">
+                    <div class="product-image">
+                        <div class="placeholder-image">🪨 White Marble</div>
+                    </div>
+                    <div class="product-info">
+                        <h3>White Marble</h3>
+                        <p class="product-type">Premium Marble</p>
+                        <a href="contact.html" class="btn btn-primary">Get Quote</a>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="marble">
+                    <div class="product-image">
+                        <div class="placeholder-image">🪨 Green Marble</div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Green Marble</h3>
+                        <p class="product-type">Designer Marble</p>
+                        <a href="contact.html" class="btn btn-primary">Get Quote</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Need Help Choosing?</h2>
+                <p>Our experts are here to help you select the perfect stone for your project</p>
+                <a href="contact.html" class="btn btn-primary">Contact Our Experts</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/919700176998" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+        <svg viewBox="0 0 32 32" fill="currentColor">
+            <path d="M16 0C7.164 0 0 7.164 0 16c0 2.829.737 5.487 2.028 7.794L.077 31.806l8.245-2.074A15.89 15.89 0 0016 32c8.836 0 16-7.164 16-16S24.836 0 16 0zm0 29.415c-2.518 0-4.878-.694-6.893-1.9l-.494-.293-5.122 1.289 1.32-4.965-.322-.512A13.25 13.25 0 012.585 16c0-7.401 6.014-13.415 13.415-13.415S29.415 8.599 29.415 16 23.401 29.415 16 29.415z"/>
+            <path d="M23.378 19.466c-.4-.2-2.37-1.169-2.737-1.303-.368-.133-.635-.2-.903.2-.267.4-1.036 1.303-1.27 1.57-.234.268-.469.302-.869.101-.4-.2-1.69-.623-3.218-1.986-1.19-1.061-1.994-2.371-2.228-2.771-.234-.4-.025-.616.176-.815.18-.179.4-.468.6-.702.2-.234.267-.4.4-.668.134-.267.067-.502-.033-.702-.1-.2-.903-2.176-1.237-2.979-.325-.782-.655-.676-.903-.688-.234-.012-.502-.015-.77-.015s-.703.1-1.071.502c-.368.4-1.404 1.372-1.404 3.346s1.437 3.88 1.637 4.147c.2.267 2.829 4.318 6.853 6.055.957.413 1.705.66 2.288.845.961.305 1.837.262 2.529.159.771-.115 2.37-.97 2.704-1.906.335-.936.335-1.738.234-1.906-.1-.167-.368-.267-.77-.467z"/>
+        </svg>
+    </a>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-main">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-col">
+                        <div class="footer-logo">
+                            <span class="logo-icon">🏛️</span>
+                            <div class="logo-text">
+                                <span class="logo-main">Mahalakshmi</span>
+                                <span class="logo-sub">GRANITES & MARBLES</span>
+                            </div>
+                        </div>
+                        <p class="footer-desc">Your trusted partner for premium quality granites and marbles.</p>
+                        <div class="social-links">
+                            <a href="#" class="social-link" aria-label="Facebook">📘</a>
+                            <a href="#" class="social-link" aria-label="Instagram">📷</a>
+                            <a href="https://wa.me/919700176998" class="social-link" aria-label="WhatsApp">💬</a>
+                        </div>
+                    </div>
+                    <div class="footer-col">
+                        <h4 class="footer-title">Quick Links</h4>
+                        <ul class="footer-links">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="products.html">Products</a></li>
+                            <li><a href="services.html">Services</a></li>
+                            <li><a href="gallery.html">Gallery</a></li>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4 class="footer-title">Our Services</h4>
+                        <ul class="footer-links">
+                            <li><a href="services.html">Granite Supply</a></li>
+                            <li><a href="services.html">Marble Supply</a></li>
+                            <li><a href="services.html">Installation</a></li>
+                            <li><a href="services.html">Consultation</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4 class="footer-title">Contact Us</h4>
+                        <ul class="footer-contact">
+                            <li><span class="icon">📍</span><span>Guntur, Andhra Pradesh</span></li>
+                            <li><span class="icon">📞</span><span>+91 97001 76998</span></li>
+                            <li><span class="icon">✉️</span><span>info@mahalakshmigranites.com</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="footer-bottom-content">
+                    <p>&copy; <span id="currentYear"></span> Mahalakshmi Granites and Marbles. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        // Product filtering
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const productCards = document.querySelectorAll('.product-card');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Update active button
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                const filter = btn.getAttribute('data-filter');
+
+                // Filter products
+                productCards.forEach(card => {
+                    if (filter === 'all') {
+                        card.style.display = 'block';
+                    } else {
+                        const categories = card.getAttribute('data-category');
+                        if (categories.includes(filter)) {
+                            card.style.display = 'block';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
+

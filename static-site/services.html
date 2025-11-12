@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services | Mahalakshmi Granites and Marbles</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="announcement-bar" id="announcementBar">
+        <div class="container">
+            <p class="announcement-text">🎉 Grand Opening Special - 10% Off All Products! 🎉</p>
+        </div>
+        <button class="announcement-close" id="announcementClose" aria-label="Close">&times;</button>
+    </div>
+
+    <div class="festival-banner" id="festivalBanner" style="display: none;">
+        <div class="festival-content">
+            <h2 class="festival-title" id="festivalTitle"></h2>
+            <p class="festival-message" id="festivalMessage"></p>
+        </div>
+    </div>
+
+    <header class="header" id="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">
+                    <span class="logo-icon">🏛️</span>
+                    <div class="logo-text">
+                        <span class="logo-main">Mahalakshmi</span>
+                        <span class="logo-sub">GRANITES & MARBLES</span>
+                    </div>
+                </a>
+                <ul class="nav-menu" id="navMenu">
+                    <li class="nav-item"><a href="index.html">Home</a></li>
+                    <li class="nav-item"><a href="products.html">Products</a></li>
+                    <li class="nav-item"><a href="services.html" class="active">Services</a></li>
+                    <li class="nav-item"><a href="gallery.html">Gallery</a></li>
+                    <li class="nav-item"><a href="about.html">About Us</a></li>
+                    <li class="nav-item"><a href="contact.html">Contact</a></li>
+                </ul>
+                <div class="header-actions">
+                    <button class="lang-switch" id="langSwitch"><span id="currentLang">EN</span></button>
+                    <button class="theme-toggle" id="themeToggle"><span class="theme-icon">🌙</span></button>
+                    <a href="contact.html" class="btn btn-primary btn-sm">Get Quote</a>
+                </div>
+                <button class="mobile-toggle" id="mobileToggle"><span></span><span></span><span></span></button>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero" style="min-height: 400px; margin-top: 80px;">
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="fade-in-up">Our Services</h1>
+                <p class="fade-in-up">Comprehensive Stone Solutions for Every Need</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>What We Offer</h2>
+                <p>Professional services to bring your vision to life</p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🏗️</div>
+                    <h3>Granite Supply</h3>
+                    <p>Premium quality granites sourced from the best quarries. Perfect for countertops, flooring, and outdoor applications.</p>
+                    <a href="contact.html" class="btn btn-secondary" style="margin-top: 1rem;">Learn More</a>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🪨</div>
+                    <h3>Marble Supply</h3>
+                    <p>Exquisite marbles for luxurious interiors. From classic white to designer varieties, we have it all.</p>
+                    <a href="contact.html" class="btn btn-secondary" style="margin-top: 1rem;">Learn More</a>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🔧</div>
+                    <h3>Expert Installation</h3>
+                    <p>Professional installation services by skilled craftsmen. Precision work guaranteed on every project.</p>
+                    <a href="contact.html" class="btn btn-secondary" style="margin-top: 1rem;">Learn More</a>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">💡</div>
+                    <h3>Design Consultation</h3>
+                    <p>Free consultation to help you choose the perfect stone for your space. Expert guidance at every step.</p>
+                    <a href="contact.html" class="btn btn-secondary" style="margin-top: 1rem;">Learn More</a>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">✂️</div>
+                    <h3>Custom Cutting</h3>
+                    <p>Precision cutting and shaping to meet your exact specifications. Any size, any design.</p>
+                    <a href="contact.html" class="btn btn-secondary" style="margin-top: 1rem;">Learn More</a>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">✨</div>
+                    <h3>Polishing & Finishing</h3>
+                    <p>Professional polishing and finishing services. Restore the shine and beauty of your stones.</p>
+                    <a href="contact.html" class="btn btn-secondary" style="margin-top: 1rem;">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Start Your Project?</h2>
+                <p>Contact us today for a free consultation and quote</p>
+                <a href="contact.html" class="btn btn-primary">Get Started</a>
+            </div>
+        </div>
+    </section>
+
+    <a href="https://wa.me/919700176998" class="whatsapp-float" target="_blank" aria-label="WhatsApp">
+        <svg viewBox="0 0 32 32" fill="currentColor">
+            <path d="M16 0C7.164 0 0 7.164 0 16c0 2.829.737 5.487 2.028 7.794L.077 31.806l8.245-2.074A15.89 15.89 0 0016 32c8.836 0 16-7.164 16-16S24.836 0 16 0zm0 29.415c-2.518 0-4.878-.694-6.893-1.9l-.494-.293-5.122 1.289 1.32-4.965-.322-.512A13.25 13.25 0 012.585 16c0-7.401 6.014-13.415 13.415-13.415S29.415 8.599 29.415 16 23.401 29.415 16 29.415z"/>
+            <path d="M23.378 19.466c-.4-.2-2.37-1.169-2.737-1.303-.368-.133-.635-.2-.903.2-.267.4-1.036 1.303-1.27 1.57-.234.268-.469.302-.869.101-.4-.2-1.69-.623-3.218-1.986-1.19-1.061-1.994-2.371-2.228-2.771-.234-.4-.025-.616.176-.815.18-.179.4-.468.6-.702.2-.234.267-.4.4-.668.134-.267.067-.502-.033-.702-.1-.2-.903-2.176-1.237-2.979-.325-.782-.655-.676-.903-.688-.234-.012-.502-.015-.77-.015s-.703.1-1.071.502c-.368.4-1.404 1.372-1.404 3.346s1.437 3.88 1.637 4.147c.2.267 2.829 4.318 6.853 6.055.957.413 1.705.66 2.288.845.961.305 1.837.262 2.529.159.771-.115 2.37-.97 2.704-1.906.335-.936.335-1.738.234-1.906-.1-.167-.368-.267-.77-.467z"/>
+        </svg>
+    </a>
+
+    <footer class="footer">
+        <div class="footer-main">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-col">
+                        <div class="footer-logo">
+                            <span class="logo-icon">🏛️</span>
+                            <div class="logo-text">
+                                <span class="logo-main">Mahalakshmi</span>
+                                <span class="logo-sub">GRANITES & MARBLES</span>
+                            </div>
+                        </div>
+                        <p class="footer-desc">Your trusted partner for premium quality granites and marbles.</p>
+                        <div class="social-links">
+                            <a href="#" class="social-link">📘</a>
+                            <a href="#" class="social-link">📷</a>
+                            <a href="https://wa.me/919700176998" class="social-link">💬</a>
+                        </div>
+                    </div>
+                    <div class="footer-col">
+                        <h4 class="footer-title">Quick Links</h4>
+                        <ul class="footer-links">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="products.html">Products</a></li>
+                            <li><a href="services.html">Services</a></li>
+                            <li><a href="gallery.html">Gallery</a></li>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4 class="footer-title">Our Services</h4>
+                        <ul class="footer-links">
+                            <li><a href="services.html">Granite Supply</a></li>
+                            <li><a href="services.html">Marble Supply</a></li>
+                            <li><a href="services.html">Installation</a></li>
+                            <li><a href="services.html">Consultation</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4 class="footer-title">Contact Us</h4>
+                        <ul class="footer-contact">
+                            <li><span class="icon">📍</span><span>Guntur, Andhra Pradesh</span></li>
+                            <li><span class="icon">📞</span><span>+91 97001 76998</span></li>
+                            <li><span class="icon">✉️</span><span>info@mahalakshmigranites.com</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="footer-bottom-content">
+                    <p>&copy; <span id="currentYear"></span> Mahalakshmi Granites and Marbles. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
+
